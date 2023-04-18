@@ -16,6 +16,7 @@ jobs:
       - name: Update github-action-build-chain 
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.DISPATCH_UPDATE }}
           repository: test-distinguish-pr/dispatch-listener
           event-type: update
+          client-payload: '{"version": "2.0.0"}'
