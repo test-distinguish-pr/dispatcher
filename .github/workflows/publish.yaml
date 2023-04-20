@@ -16,6 +16,7 @@ jobs:
       - name: Install docker
         run: |
           brew install docker act
+          echo "-P ubuntu-latest=ghcr.io/catthehacker/ubuntu:act-latest" > ~/.actrc
           colima start
       - run: |
           docker ps
