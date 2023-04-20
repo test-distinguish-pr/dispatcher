@@ -14,5 +14,5 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: |
-        docker ps
-        echo $DOCKER_HOST
+          docker ps
+          echo $DOCKER_HOST
