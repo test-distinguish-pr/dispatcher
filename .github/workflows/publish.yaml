@@ -18,6 +18,7 @@ jobs:
           brew install docker act
           echo "-P ubuntu-latest=ghcr.io/catthehacker/ubuntu:act-latest" > ~/.actrc
           colima start
+          echo "DOCKER_HOST=$HOME/.colima/docker.sock" >> $GITHUB_ENV
       - run: |
           docker ps
           echo $DOCKER_HOST
