@@ -13,8 +13,9 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v1
+      - name: Install docker
       - run: |
           brew install docker
-          colima start
+      - run: |
           docker ps
           echo $DOCKER_HOST
