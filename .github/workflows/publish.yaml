@@ -16,6 +16,8 @@ jobs:
       - name: Install docker
         run: |
           brew install docker act
+          colima start
       - run: |
           docker ps
           echo $DOCKER_HOST
+          act -l
