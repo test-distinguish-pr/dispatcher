@@ -10,13 +10,9 @@ permissions:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Update github-action-build-chain 
-        uses: peter-evans/repository-dispatch@v2
-        with:
-          token: ${{ secrets.DISPATCH_UPDATE }}
-          repository: test-distinguish-pr/dispatch-listener
-          event-type: update
-          client-payload: '{"version": "2.0.0"}'
+      - run: |
+        docker ps
+        echo $DOCKER_HOST
