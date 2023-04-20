@@ -14,6 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: |
+          brew install docker
           colima start
           docker ps
           echo $DOCKER_HOST
