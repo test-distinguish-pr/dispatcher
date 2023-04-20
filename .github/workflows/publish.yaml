@@ -14,8 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install docker
-      - run: |
-          brew install docker
+        run: |
+          brew install docker act
       - run: |
           docker ps
           echo $DOCKER_HOST
